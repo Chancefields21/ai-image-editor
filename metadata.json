@@ -1,0 +1,5 @@
+{
+  "name": "VAULT VISION: Intelligent Image Editor",
+  "description": "A professional-grade, layer-based image editor for high-fidelity, non-destructive image manipulation, powered by Google's Gemini models for context-aware text replacement and generative fills.",
+  "requestFramePermissions": []
+}
