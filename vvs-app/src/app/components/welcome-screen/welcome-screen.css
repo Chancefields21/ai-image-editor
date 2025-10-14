@@ -1,0 +1,74 @@
+:host {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.welcome-overlay {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+.welcome-content {
+  background-color: rgba(42, 42, 42, 0.8); /* #2a2a2a with transparency */
+  padding: 3rem 4rem;
+  border-radius: 1rem;
+  text-align: center;
+  border: 1px solid var(--borders-dividers);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+
+h2 {
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: var(--primary-text);
+  margin: 0 0 1rem 0;
+}
+
+p {
+  font-size: 1.1rem;
+  color: var(--secondary-text);
+  margin-bottom: 2.5rem;
+}
+
+.actions {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+}
+
+button {
+  background-color: transparent;
+  border: 1px solid var(--borders-dividers);
+  color: var(--primary-text);
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+button:hover {
+  background-color: var(--panel-background);
+  border-color: var(--primary-accent);
+}
+
+button.primary {
+  background: linear-gradient(45deg, var(--primary-accent), var(--secondary-accent));
+  border: none;
+  color: var(--primary-background);
+}
+
+button.primary:hover {
+    filter: brightness(1.1);
+}

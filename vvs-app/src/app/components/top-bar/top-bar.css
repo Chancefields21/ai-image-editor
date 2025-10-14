@@ -1,0 +1,49 @@
+:host {
+  display: block;
+  background-color: var(--panel-background);
+  border-bottom: 1px solid var(--borders-dividers);
+  padding: 0 1rem;
+}
+
+.top-bar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 50px;
+}
+
+.logo-title {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  height: 30px;
+  margin-right: 0.5rem;
+}
+
+h1 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--primary-text);
+  margin: 0;
+}
+
+.menu {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.menu span {
+  cursor: pointer;
+  color: var(--secondary-text);
+  transition: color 0.2s ease-in-out;
+}
+
+.menu span:hover {
+  color: var(--primary-text);
+}
+
+.device-info {
+  color: var(--secondary-text);
+}
