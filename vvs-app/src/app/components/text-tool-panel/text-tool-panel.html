@@ -1,9 +1,10 @@
 <div class="panel-container">
   <h4>Text Tool</h4>
 
-  <button (click)="recognizeText()" [disabled]="isAnalyzing">
+  <button (click)="recognizeText()" [disabled]="isAnalyzing || !selection()">
     {{ isAnalyzing ? 'Analyzing...' : 'Recognize Text in Selection' }}
   </button>
+  <p *ngIf="!selection()" class="disabled-text">Draw a selection on the canvas to enable.</p>
 
   <div class="divider"></div>
 

@@ -17,11 +17,20 @@
       <app-text-tool-panel></app-text-tool-panel>
       <div class="tool-divider"></div>
       <app-eraser-tool-panel></app-eraser-tool-panel>
+      <div class="tool-divider"></div>
+      <app-move-tool-panel></app-move-tool-panel>
     </aside>
 
     <!-- Canvas Area -->
     <main class="canvas-area">
       <canvas #canvas></canvas>
+      <canvas
+        #selectionCanvas
+        class="selection-canvas"
+        (mousedown)="onCanvasMouseDown($event)"
+        (mousemove)="onCanvasMouseMove($event)"
+        (mouseup)="onCanvasMouseUp($event)"
+      ></canvas>
     </main>
 
     <!-- Right Sidebar -->

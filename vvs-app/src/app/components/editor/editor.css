@@ -75,6 +75,13 @@
   position: relative;
 }
 
+.selection-canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  cursor: crosshair;
+}
+
 .canvas-background {
     position: absolute;
     top: 0;

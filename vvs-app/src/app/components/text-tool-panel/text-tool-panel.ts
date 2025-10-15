@@ -5,6 +5,7 @@ import { TextLayerService, TextProperties } from '../../services/text-layer.serv
 import { Layer } from '../../models/layer.model';
 import { GeminiService } from '../../services/gemini.service';
 import { CanvasService } from '../../services/canvas.service';
+import { SelectionService } from '../../services/selection.service';
 
 @Component({
   selector: 'app-text-tool-panel',
@@ -17,6 +18,8 @@ export class TextToolPanelComponent {
   textLayerService = inject(TextLayerService);
   geminiService = inject(GeminiService);
   canvasService = inject(CanvasService);
+  selectionService = inject(SelectionService);
+  selection = this.selectionService.selection;
 
   activeTextLayer = signal<Layer | null>(null);
 
@@ -31,8 +34,9 @@ export class TextToolPanelComponent {
   isItalic = false;
 
   recognizeText() {
-    // In a real app, this would come from a selection tool
-    const selectionRect = { x: 50, y: 50, width: 200, height: 100 };
+    const selectionRect = this.selection();
+    if (!selectionRect) return;
+
     const imageDataUrl = this.canvasService.getImageDataFromSelection(selectionRect);
     if (!imageDataUrl) return;
 

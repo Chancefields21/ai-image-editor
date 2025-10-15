@@ -1,9 +1,10 @@
 <div class="panel-container">
   <h4>Eraser Tool</h4>
   <p>Select an area on the canvas and click below to erase it.</p>
-  <button (click)="eraseSelection()" [disabled]="isErasing || !canvasService.isCvReady()">
+  <button (click)="eraseSelection()" [disabled]="isErasing || !canvasService.isCvReady() || !selection()">
     <span *ngIf="!canvasService.isCvReady()">OpenCV Loading...</span>
     <span *ngIf="canvasService.isCvReady() && !isErasing">Erase Selection</span>
     <span *ngIf="isErasing">Erasing...</span>
   </button>
+  <p *ngIf="!selection()" class="disabled-text">Draw a selection on the canvas to enable.</p>
 </div>
