@@ -2,6 +2,28 @@
 
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.3.5.
 
+## Gemini API Key Setup
+
+This project uses the Google Gemini API for its AI features. To use these features, you must provide your own API key.
+
+1.  Create a new directory `src/environments`.
+2.  Create a new file `src/environments/environment.ts` with the following content:
+    ```typescript
+    export const environment = {
+      production: false,
+      geminiApiKey: 'YOUR_API_KEY_HERE'
+    };
+    ```
+3.  Create another file `src/environments/environment.prod.ts` for production builds:
+    ```typescript
+    export const environment = {
+      production: true,
+      geminiApiKey: 'YOUR_API_KEY_HERE'
+    };
+    ```
+
+**Important:** These files are included in `.gitignore` and should not be committed to version control.
+
 ## Development server
 
 To start a local development server, run:

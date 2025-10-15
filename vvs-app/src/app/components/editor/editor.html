@@ -1,0 +1,40 @@
+<div class="editor-container">
+  <!-- Top Menu Bar -->
+  <header class="top-bar">
+    <span>Gemini Studio</span>
+    <nav>
+      <a>File</a>
+      <a>Edit</a>
+      <a>View</a>
+      <a>Layer</a>
+      <a>AI Tools</a>
+    </nav>
+  </header>
+
+  <div class="main-content">
+    <!-- Left Toolbar -->
+    <aside class="left-toolbar">
+      <app-text-tool-panel></app-text-tool-panel>
+      <div class="tool-divider"></div>
+      <app-eraser-tool-panel></app-eraser-tool-panel>
+    </aside>
+
+    <!-- Canvas Area -->
+    <main class="canvas-area">
+      <canvas #canvas></canvas>
+    </main>
+
+    <!-- Right Sidebar -->
+    <aside class="right-sidebar">
+      <app-layer-properties></app-layer-properties>
+    </aside>
+  </div>
+
+  <!-- Welcome Modal -->
+  <div class="modal-overlay" *ngIf="showWelcomeModal">
+    <app-welcome-modal
+      (close)="showWelcomeModal = false"
+      (newFromFile)="onNewProjectFromFile()">
+    </app-welcome-modal>
+  </div>
+</div>

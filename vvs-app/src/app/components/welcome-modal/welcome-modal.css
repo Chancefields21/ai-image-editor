@@ -1,0 +1,138 @@
+:host {
+  --background-color: rgba(30, 30, 35, 0.85);
+  --panel-color: rgba(42, 42, 46, 0.9);
+  --border-color: rgba(74, 74, 82, 0.7);
+  --text-color: #e0e0e0;
+  --text-secondary-color: #a0a0a0;
+  --accent-color: #8a4fff;
+  --accent-glow: rgba(138, 79, 255, 0.5);
+  --primary-button-bg: #6c32d9;
+}
+
+.modal-content {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--background-color);
+  backdrop-filter: blur(15px);
+  border-radius: 16px;
+  width: 700px;
+  padding: 24px;
+  border: 1px solid var(--border-color);
+  box-shadow: 0 0 30px var(--accent-glow);
+  color: var(--text-color);
+  font-family: 'Inter', sans-serif;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+h1 {
+  font-size: 24px;
+  margin: 0;
+}
+
+p {
+  font-size: 16px;
+  color: var(--text-secondary-color);
+  margin: 8px 0 24px;
+}
+
+.actions {
+  display: flex;
+  gap: 24px;
+  margin-bottom: 24px;
+}
+
+.main-actions, .recent-editing {
+  flex: 1;
+}
+
+.action-button {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 12px;
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+  background-color: var(--panel-color);
+  color: var(--text-color);
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.action-button:hover {
+  background-color: var(--border-color);
+}
+
+.action-button.primary {
+  background-color: var(--primary-button-bg);
+  border: none;
+}
+
+.recent-editing h4 {
+  margin: 0 0 12px;
+  font-size: 14px;
+  color: var(--text-secondary-color);
+}
+
+.recent-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 8px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.recent-item:hover {
+  background-color: var(--panel-color);
+}
+
+.recent-item img {
+  width: 60px;
+  height: 40px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.recent-item p {
+  margin: 0;
+  font-size: 14px;
+  color: var(--text-color);
+}
+
+.recent-item span {
+  font-size: 12px;
+  color: var(--text-secondary-color);
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 16px;
+  border-top: 1px solid var(--border-color);
+  font-size: 12px;
+}
+
+.footer label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--text-secondary-color);
+}
+
+.close-button {
+  background-color: #4a4a50;
+  color: var(--text-color);
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+}

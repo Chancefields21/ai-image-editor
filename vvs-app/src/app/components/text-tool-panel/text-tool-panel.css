@@ -1,0 +1,137 @@
+:host {
+  display: block;
+  font-family: 'Inter', sans-serif;
+  color: var(--text-color, #e0e0e0);
+}
+
+.panel-container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 12px;
+  background-color: var(--panel-color, #2a2a2e);
+  border-radius: 8px;
+}
+
+h4 {
+  margin: 0;
+  font-size: 16px;
+  border-bottom: 1px solid var(--border-color, #3a3a3e);
+  padding-bottom: 8px;
+}
+
+.divider {
+  height: 1px;
+  background-color: var(--border-color, #3a3a3e);
+  margin: 8px 0;
+}
+
+p {
+  font-size: 12px;
+  color: #a0a0a0;
+  margin: 0;
+  text-align: center;
+}
+
+button {
+  background-color: var(--accent-color, #8a4fff);
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.2s;
+}
+
+button:hover {
+  background-color: #6c32d9;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-group label {
+  font-size: 12px;
+  font-weight: 500;
+  color: #a0a0a0;
+}
+
+.form-group input[type="range"] {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 4px;
+  background: #4a4a50;
+  outline: none;
+  border-radius: 2px;
+}
+
+.form-group input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 16px;
+  height: 16px;
+  background: var(--accent-color, #8a4fff);
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.form-group input[type="color"] {
+  width: 100%;
+  height: 30px;
+  border: none;
+  padding: 0;
+  background: none;
+}
+
+textarea {
+  background-color: #1a1a1e;
+  border: 1px solid #4a4a50;
+  color: var(--text-color, #e0e0e0);
+  border-radius: 4px;
+  padding: 8px;
+  min-height: 60px;
+  resize: vertical;
+}
+
+.position-group {
+  display: flex;
+  gap: 16px;
+}
+
+.position-group .form-group {
+  flex: 1;
+}
+
+input[type="number"] {
+  background-color: #1a1a1e;
+  border: 1px solid #4a4a50;
+  color: var(--text-color, #e0e0e0);
+  border-radius: 4px;
+  padding: 8px;
+  width: 100%;
+}
+
+.style-group {
+  display: flex;
+  gap: 16px;
+}
+
+.style-group label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+}
+
+select {
+  background-color: #1a1a1e;
+  border: 1px solid #4a4a50;
+  color: var(--text-color, #e0e0e0);
+  border-radius: 4px;
+  padding: 8px;
+  width: 100%;
+}
