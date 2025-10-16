@@ -5,7 +5,7 @@
   --text-color: #e0e0e0;
   --text-secondary-color: #a0a0a0;
   --accent-color: #8a4fff;
-  --accent-glow: rgba(138, 79, 255, 0.5);
+  --accent-glow: rgba(138, 79, 255, 0.3);
   --primary-button-bg: #6c32d9;
 }
 
@@ -13,12 +13,12 @@
   display: flex;
   flex-direction: column;
   background-color: var(--background-color);
-  backdrop-filter: blur(15px);
-  border-radius: 16px;
-  width: 700px;
+  backdrop-filter: blur(20px);
+  border-radius: 24px;
+  width: 800px;
   padding: 24px;
   border: 1px solid var(--border-color);
-  box-shadow: 0 0 30px var(--accent-glow);
+  box-shadow: 0 0 40px var(--accent-glow);
   color: var(--text-color);
   font-family: 'Inter', sans-serif;
 }
@@ -26,48 +26,70 @@
 .header {
   display: flex;
   align-items: center;
-  gap: 8px;
-  margin-bottom: 16px;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.logo {
+  width: 32px;
+  height: 32px;
 }
 
 h1 {
-  font-size: 24px;
+  font-size: 28px;
   margin: 0;
+  font-weight: 600;
 }
 
 p {
   font-size: 16px;
   color: var(--text-secondary-color);
-  margin: 8px 0 24px;
+  margin: 8px 0 32px;
 }
 
-.actions {
+.main-content {
   display: flex;
-  gap: 24px;
-  margin-bottom: 24px;
+  gap: 32px;
+  margin-bottom: 32px;
 }
 
-.main-actions, .recent-editing {
+.left-panel, .right-panel {
   flex: 1;
+}
+
+.right-panel {
+  border-left: 1px solid var(--border-color);
+  padding-left: 32px;
+}
+
+h4 {
+  margin: 0 0 16px;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-secondary-color);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
 }
 
 .action-button {
   display: flex;
   align-items: center;
+  gap: 12px;
   width: 100%;
-  padding: 12px;
+  padding: 12px 16px;
   margin-bottom: 12px;
   border-radius: 8px;
   border: 1px solid var(--border-color);
-  background-color: var(--panel-color);
+  background-color: transparent;
   color: var(--text-color);
   font-size: 14px;
   cursor: pointer;
-  transition: background-color 0.2s;
+  transition: background-color 0.2s, border-color 0.2s;
 }
 
 .action-button:hover {
-  background-color: var(--border-color);
+  background-color: rgba(255, 255, 255, 0.05);
+  border-color: var(--accent-color);
 }
 
 .action-button.primary {
@@ -75,19 +97,19 @@ p {
   border: none;
 }
 
-.recent-editing h4 {
-  margin: 0 0 12px;
-  font-size: 14px;
-  color: var(--text-secondary-color);
+.action-button .icon {
+  width: 20px;
+  height: 20px;
 }
 
 .recent-item {
   display: flex;
   align-items: center;
-  gap: 12px;
-  padding: 8px;
-  border-radius: 6px;
+  gap: 16px;
+  padding: 12px;
+  border-radius: 8px;
   cursor: pointer;
+  transition: background-color 0.2s;
 }
 
 .recent-item:hover {
@@ -95,15 +117,17 @@ p {
 }
 
 .recent-item img {
-  width: 60px;
-  height: 40px;
+  width: 80px;
+  height: 50px;
   object-fit: cover;
-  border-radius: 4px;
+  border-radius: 6px;
+  border: 1px solid var(--border-color);
 }
 
 .recent-item p {
   margin: 0;
   font-size: 14px;
+  font-weight: 500;
   color: var(--text-color);
 }
 
@@ -116,7 +140,7 @@ p {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-top: 16px;
+  padding-top: 24px;
   border-top: 1px solid var(--border-color);
   font-size: 12px;
 }
@@ -129,10 +153,16 @@ p {
 }
 
 .close-button {
-  background-color: #4a4a50;
+  background-color: #3a3a40;
   color: var(--text-color);
   border: none;
-  padding: 8px 16px;
-  border-radius: 6px;
+  padding: 10px 20px;
+  border-radius: 8px;
   cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.2s;
+}
+
+.close-button:hover {
+  background-color: #4a4a50;
 }

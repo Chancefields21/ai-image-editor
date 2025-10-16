@@ -1,35 +1,39 @@
 <div class="modal-content">
   <div class="header">
-    <span class="logo"></span>
+    <img src="assets/gemini-logo.svg" alt="Gemini Studio Logo" class="logo">
     <h3>Gemini Studio</h3>
   </div>
 
-  <h1>Welcome to AI Image Editing</h1>
-  <p>Unleash creativity with intelligent tools.</p>
+  <div class="main-content">
+    <div class="left-panel">
+      <h1>Welcome to AI Image Editing</h1>
+      <p>Unleash creativity with intelligent tools.</p>
 
-  <div class="actions">
-    <div class="main-actions">
-      <button class="action-button primary" (click)="onNewFromFile()">
-        <span class="icon new-file"></span>
-        New from File
-      </button>
-      <button class="action-button">
-        <span class="icon new-prompt"></span>
-        Now from Prompt
-      </button>
+      <div class="start-project">
+        <h4>Start a New Project</h4>
+        <button class="action-button primary" (click)="onNewFromFile()">
+          <img src="assets/new-from-file.svg" alt="" class="icon">
+          New from File
+        </button>
+        <button class="action-button">
+          <img src="assets/new-from-prompt.svg" alt="" class="icon">
+          Now from Prompt
+        </button>
+      </div>
     </div>
-    <div class="recent-editing">
+
+    <div class="right-panel">
       <h4>Recent Editing</h4>
       <div class="recent-item">
         <img src="https://i.imgur.com/8a1c9tB.png" alt="ID Card Thumbnail">
-        <div>
+        <div class="item-details">
           <p>ID_Card_Final.png</p>
           <span>Yesterday</span>
         </div>
       </div>
       <div class="recent-item">
         <img src="https://i.imgur.com/s6nL4gG.png" alt="Website Hero Thumbnail">
-        <div>
+        <div class="item-details">
           <p>Website_Hero_Banner.jpg</p>
           <span>Saturday / 2 hours ago</span>
         </div>
