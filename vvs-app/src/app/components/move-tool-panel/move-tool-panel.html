@@ -1,0 +1,8 @@
+<div class="panel-container">
+  <h4>Magic Grabber</h4>
+  <p>Select an area and click below to lift it onto a new layer.</p>
+  <button (click)="grabAndMove()" [disabled]="!selection()">
+    Grab Selection
+  </button>
+  <p *ngIf="!selection()" class="disabled-text">Draw a selection on the canvas to enable.</p>
+</div>

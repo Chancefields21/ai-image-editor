@@ -1,0 +1,23 @@
+<div class="panel-container">
+  <div class="panel-header">
+    <h3>Layers</h3>
+    <div class="actions">
+      <!-- Placeholder for Add/Delete buttons -->
+    </div>
+  </div>
+  <div class="layer-list">
+    @for (layer of layers(); track layer.id) {
+      <div class="layer-item">
+        <div class="layer-thumbnail">
+          <!-- Placeholder for layer thumbnail -->
+        </div>
+        <span class="layer-name">{{ layer.name }}</span>
+      </div>
+    } @empty {
+      <div class="empty-layers">
+        <p>No layers yet.</p>
+        <p>Upload an image to start.</p>
+      </div>
+    }
+  </div>
+</div>

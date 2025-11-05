@@ -1,0 +1,59 @@
+<div class="panel-container">
+  <h4>Text Tool</h4>
+
+  <button (click)="recognizeText()" [disabled]="isAnalyzing || !selection()">
+    {{ isAnalyzing ? 'Analyzing...' : 'Recognize Text in Selection' }}
+  </button>
+  <p *ngIf="!selection()" class="disabled-text">Draw a selection on the canvas to enable.</p>
+
+  <div class="divider"></div>
+
+  @if (activeTextLayer()) {
+    <div class="form-group">
+      <label for="textContent">Content</label>
+      <textarea id="textContent" [(ngModel)]="textContent" (ngModelChange)="updateText()"></textarea>
+    </div>
+    <div class="form-group">
+      <label for="fontSize">Font Size</label>
+      <input type="range" id="fontSize" min="8" max="128" [(ngModel)]="fontSize" (ngModelChange)="updateText()">
+      <span>{{ fontSize }}px</span>
+    </div>
+    <div class="form-group">
+      <label for="fontColor">Color</label>
+      <input type="color" id="fontColor" [(ngModel)]="fontColor" (ngModelChange)="updateText()">
+    </div>
+      <div class="form-group">
+        <label for="fontFamily">Font Family</label>
+        <select id="fontFamily" [(ngModel)]="fontFamily" (ngModelChange)="updateText()">
+          <option>Arial</option>
+          <option>Verdana</option>
+          <option>Times New Roman</option>
+          <option>serif</option>
+          <option>sans-serif</option>
+        </select>
+      </div>
+      <div class="style-group">
+        <label>
+          <input type="checkbox" [(ngModel)]="isBold" (ngModelChange)="updateText()">
+          Bold
+        </label>
+        <label>
+          <input type="checkbox" [(ngModel)]="isItalic" (ngModelChange)="updateText()">
+          Italic
+        </label>
+      </div>
+    <div class="position-group">
+      <div class="form-group">
+        <label for="positionX">X</label>
+        <input type="number" id="positionX" [(ngModel)]="positionX" (ngModelChange)="updateText()">
+      </div>
+      <div class="form-group">
+        <label for="positionY">Y</label>
+        <input type="number" id="positionY" [(ngModel)]="positionY" (ngModelChange)="updateText()">
+      </div>
+    </div>
+  } @else {
+    <p>Click "Recognize Text" or the button below to add a new text layer.</p>
+    <button (click)="createNewTextLayer()">Add Custom Text</button>
+  }
+</div>

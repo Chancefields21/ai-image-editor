@@ -1,0 +1,51 @@
+:host {
+  display: block;
+  font-family: 'Inter', sans-serif;
+  color: var(--text-color, #e0e0e0);
+}
+
+.panel-container {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 12px;
+  background-color: var(--panel-color, #2a2a2e);
+  border-radius: 8px;
+}
+
+h4 {
+  margin: 0;
+  font-size: 16px;
+}
+
+p {
+  font-size: 12px;
+  color: #a0a0a0;
+  margin: 0;
+}
+
+button {
+  background-color: var(--accent-color, #8a4fff);
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.2s;
+}
+
+button:hover:not(:disabled) {
+  background-color: #6c32d9;
+}
+
+button:disabled {
+  background-color: #4a4a50;
+  cursor: not-allowed;
+}
+
+.disabled-text {
+  font-size: 12px;
+  text-align: center;
+  color: #7a7a80;
+}
