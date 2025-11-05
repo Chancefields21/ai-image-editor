@@ -1,0 +1,21 @@
+{
+  "name": "ai-photo-editor-pro",
+  "version": "0.1.0",
+  "private": true,
+  "description": "A professional-grade, AI-powered image editor.",
+  "author": "Vision Vault Studio",
+  "license": "MIT",
+  "scripts": {
+    "dev": "turbo run dev",
+    "build": "turbo run build",
+    "test": "turbo run test",
+    "lint": "turbo run lint",
+    "format": "prettier --write \"**/*.{ts,tsx,md}\""
+  },
+  "devDependencies": {
+    "prettier": "^3.2.5",
+    "turbo": "^1.13.3",
+    "typescript": "^5.4.5"
+  },
+  "packageManager": "pnpm@8.15.5"
+}
