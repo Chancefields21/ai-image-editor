@@ -1,0 +1,26 @@
+/* You can add global styles to this file, and also import other style files */
+
+:root {
+  --primary-background: #1a1a1a;
+  --panel-background: #2a2a2a;
+  --primary-accent: #FFD700;
+  --secondary-accent: #f59e0b;
+  --primary-text: #e5e7eb;
+  --secondary-text: #a1a1aa;
+  --borders-dividers: #404040;
+  font-family: Inter, sans-serif;
+  font-feature-settings: 'liga' 1, 'calt' 1; /* fix for Chrome */
+}
+
+@supports (font-variation-settings: normal) {
+  :root {
+    font-family: InterVariable, sans-serif;
+  }
+}
+
+body {
+  background-color: var(--primary-background);
+  color: var(--primary-text);
+  margin: 0;
+  padding: 0;
+}

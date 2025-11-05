@@ -1,0 +1,54 @@
+:host {
+  display: block;
+  height: 100vh;
+  width: 100vw;
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  transition: filter 0.3s ease-in-out;
+}
+
+.app-container.welcome-visible {
+  filter: blur(8px);
+}
+
+app-top-bar, app-bottom-bar {
+  flex-shrink: 0;
+}
+
+.main-content {
+  display: flex;
+  flex-grow: 1;
+  overflow: hidden;
+}
+
+.app-left-panel, .app-right-panel {
+  width: 250px;
+  background-color: var(--panel-background);
+  padding: 1rem;
+  background-image: radial-gradient(circle at top left, rgba(255, 215, 0, 0.05), transparent 30%),
+                    radial-gradient(circle at bottom right, rgba(245, 158, 11, 0.05), transparent 40%);
+}
+
+.app-center-panel {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.app-center-panel::before {
+  content: '';
+  position: absolute;
+  inset: -10px;
+  border-radius: 1rem;
+  background: linear-gradient(45deg, var(--primary-accent), var(--secondary-accent));
+  filter: blur(15px);
+  z-index: -1;
+  opacity: 0.5;
+}
